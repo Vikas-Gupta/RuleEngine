@@ -106,5 +106,19 @@ namespace RuleEngineTest
             bool isActivationMailSent = ruleResult.Contains("Mail To Owner About Membership Upgradation");
             Assert.IsTrue(isActivationMailSent);
         }
+
+        [TestMethod]
+        public void Add_Video_Rule()
+        {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.Video;
+            payment.ProductName = "Learning to Ski";
+            payment.IsBook = false;
+            IRule rule = new VideoRule();
+            ruleManager.AddRule(rule);
+            var ruleResult = ruleManager.ExecuteRules(payment);
+            bool isVideoRuleApplied = ruleResult.Contains("Add Free First Aid Video");
+            Assert.IsTrue(isVideoRuleApplied);
+        }
     }
 }
