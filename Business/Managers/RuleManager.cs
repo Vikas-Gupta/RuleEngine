@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Business.Interfaces;
 using Shared.Entities.Interface;
+using Shared.Entities;
 
 namespace Business.Managers
 {
@@ -16,13 +17,13 @@ namespace Business.Managers
 
         }
 
-        public List<string> ExecuteRules()
+        public List<string> ExecuteRules(Payment payment)
         {
             List<string> result = new List<string>();
 
             foreach (var rule in _rules)
             {
-                result.Add(rule.ApplyRule());
+                result.Add(rule.ApplyRule(payment));
             }
 
             return result;

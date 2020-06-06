@@ -8,9 +8,13 @@ namespace Shared.Entities.Entities
 {
     public class PhysicalProductRule : IRule
     {
-        public string ApplyRule()
+        public string ApplyRule(Payment payment)
         {
-            throw new NotImplementedException();
+            if (payment.PaymentType == Enum.Enum_PaymentType.PhysicalProduct)
+            {
+                return "Generate Packing Slip";
+            }
+            return string.Empty;
         }
     }
 }

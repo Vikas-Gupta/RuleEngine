@@ -7,6 +7,6 @@ namespace Shared.Entities.Interface
 {
     public interface IRule
     {
-        string ApplyRule();
+        string ApplyRule(Payment payment);
     }
 }

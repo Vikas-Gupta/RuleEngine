@@ -7,6 +7,8 @@ using Shared.Entities.Interface;
 using Shared.Entities.Entities;
 using Business.Interfaces;
 using Business.Managers;
+using Shared.Entities;
+using Shared.Enum;
 
 namespace RuleEngineTest
 {
@@ -26,9 +28,12 @@ namespace RuleEngineTest
         [TestMethod]
         public void Add_Physical_Product_Rule()
         {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.PhysicalProduct;
+            payment.ProductName = "Computer";
             IRule rule = new PhysicalProductRule();
             ruleManager.AddRule(rule);
-            var ruleResult = ruleManager.ExecuteRules();
+            var ruleResult = ruleManager.ExecuteRules(payment);
             bool isPhysicalRuleApplied = ruleResult.Contains("Generate Packing Slip");
             Assert.IsTrue(isPhysicalRuleApplied);
         }
