@@ -42,7 +42,7 @@ namespace RuleEngineTest
         public void Add_Book_Rule()
         {
             Payment payment = new Payment();
-            payment.PaymentType = Enum_PaymentType.Book;
+            payment.PaymentType = Enum_PaymentType.PhysicalProduct;
             payment.ProductName = "Harry Potter Book";
             payment.IsBook = true;
             IRule rule = new BookRule();
@@ -50,6 +50,25 @@ namespace RuleEngineTest
             var ruleResult = ruleManager.ExecuteRules(payment);
             bool isBookRuleApplied = ruleResult.Contains("Packing Slip for Royalty Department");
             Assert.IsTrue(isBookRuleApplied);
+        }
+
+        [TestMethod]
+        public void Add_Book_And_Physical_Rule()
+        {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.PhysicalProduct;
+            payment.ProductName = "Harry Potter Book";
+            payment.IsBook = true;
+            IRule rule = new BookRule();
+            ruleManager.AddRule(rule);
+            // Both rule so that both rules will be added to rule result;
+            rule = new PhysicalProductRule();
+            ruleManager.AddRule(rule);
+            var ruleResult = ruleManager.ExecuteRules(payment);
+            bool isBookRuleApplied = ruleResult.Contains("Packing Slip for Royalty Department");
+            Assert.IsTrue(isBookRuleApplied);
+            bool isPhysicalRuleApplied = ruleResult.Contains("Generate Packing Slip");
+            Assert.IsTrue(isPhysicalRuleApplied);
         }
     }
 }
