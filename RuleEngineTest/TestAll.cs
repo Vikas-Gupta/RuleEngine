@@ -120,5 +120,33 @@ namespace RuleEngineTest
             bool isVideoRuleApplied = ruleResult.Contains("Add Free First Aid Video");
             Assert.IsTrue(isVideoRuleApplied);
         }
+
+        [TestMethod]
+        public void Add_Commission_Rule_For_Physical_Product()
+        {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.PhysicalProduct;
+            payment.ProductName = "Mobile";
+            payment.IsBook = false;
+            IRule rule = new CommissionRule();
+            ruleManager.AddRule(rule);
+            var ruleResult = ruleManager.ExecuteRules(payment);
+            bool isCommissionRuleApplied = ruleResult.Contains("Commission Payment to Agent");
+            Assert.IsTrue(isCommissionRuleApplied);
+        }
+
+        [TestMethod]
+        public void Add_Commission_Rule_For_Book()
+        {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.Book;
+            payment.ProductName = "My Story";
+            payment.IsBook = true;
+            IRule rule = new CommissionRule();
+            ruleManager.AddRule(rule);
+            var ruleResult = ruleManager.ExecuteRules(payment);
+            bool isCommissionRuleApplied = ruleResult.Contains("Commission Payment to Agent");
+            Assert.IsTrue(isCommissionRuleApplied);
+        }
     }
 }
