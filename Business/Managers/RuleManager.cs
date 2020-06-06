@@ -18,7 +18,14 @@ namespace Business.Managers
 
         public List<string> ExecuteRules()
         {
-            throw new NotImplementedException();
+            List<string> result = new List<string>();
+
+            foreach (var rule in _rules)
+            {
+                result.Add(rule.ApplyRule());
+            }
+
+            return result;
         }
 
 

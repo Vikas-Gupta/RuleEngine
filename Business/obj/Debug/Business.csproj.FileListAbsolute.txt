@@ -2,3 +2,6 @@ c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\bin\De
 c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\bin\Debug\Business.pdb
 c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\obj\Debug\Business.dll
 c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\obj\Debug\Business.pdb
+C:\Users\shelly\Documents\Visual Studio 2010\Projects\RuleEngine\Business\bin\Debug\Shared.dll
+C:\Users\shelly\Documents\Visual Studio 2010\Projects\RuleEngine\Business\bin\Debug\Shared.pdb
+C:\Users\shelly\Documents\Visual Studio 2010\Projects\RuleEngine\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
