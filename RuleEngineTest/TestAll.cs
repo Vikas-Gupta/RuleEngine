@@ -70,5 +70,19 @@ namespace RuleEngineTest
             bool isPhysicalRuleApplied = ruleResult.Contains("Generate Packing Slip");
             Assert.IsTrue(isPhysicalRuleApplied);
         }
+
+        [TestMethod]
+        public void Add_Membership_Rule()
+        {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.Membership;
+            payment.ProductName = "Golf Club Membership";
+            payment.IsBook = false;
+            IRule rule = new MembershipRule();
+            ruleManager.AddRule(rule);
+            var ruleResult = ruleManager.ExecuteRules(payment);
+            bool isMembershipRuleApplied = ruleResult.Contains("Activate Membership");
+            Assert.IsTrue(isMembershipRuleApplied);
+        }
     }
 }

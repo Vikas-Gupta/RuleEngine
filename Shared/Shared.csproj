@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Entities\BookRule.cs" />
+    <Compile Include="Entities\Entities\MembershipRule.cs" />
     <Compile Include="Entities\Entities\PhysicalProductRule.cs" />
     <Compile Include="Entities\Entities\Payment.cs" />
     <Compile Include="Entities\Interface\IRule.cs" />
