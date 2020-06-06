@@ -27,6 +27,7 @@ namespace RuleEngineTest
         public void Add_Physical_Product_Rule()
         {
             IRule rule = new PhysicalProductRule();
+            ruleManager.AddRule(rule);
             var ruleResult = ruleManager.ExecuteRules();
             bool isPhysicalRuleApplied = ruleResult.Contains("Generate Packing Slip");
             Assert.IsTrue(isPhysicalRuleApplied);
