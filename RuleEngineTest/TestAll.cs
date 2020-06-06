@@ -88,5 +88,23 @@ namespace RuleEngineTest
             bool isActivationMailSent = ruleResult.Contains("Mail To Owner About Membership Activation");
             Assert.IsTrue(isActivationMailSent);
         }
+
+        [TestMethod]
+        public void Add_Upgrade_Membership_Rule()
+        {
+            Payment payment = new Payment();
+            payment.PaymentType = Enum_PaymentType.Upgrade;
+            payment.ProductName = "Golf Club Membership";
+            payment.IsBook = false;
+            IRule rule = new UpgradeMembershipRule();
+            ruleManager.AddRule(rule);
+            rule = new E_MailRule();
+            ruleManager.AddRule(rule);
+            var ruleResult = ruleManager.ExecuteRules(payment);
+            bool isMembershipUpgradeRuleApplied = ruleResult.Contains("Upgrade Membership");
+            Assert.IsTrue(isMembershipUpgradeRuleApplied);
+            bool isActivationMailSent = ruleResult.Contains("Mail To Owner About Membership Upgradation");
+            Assert.IsTrue(isActivationMailSent);
+        }
     }
 }

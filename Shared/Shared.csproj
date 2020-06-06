@@ -45,6 +45,7 @@
     <Compile Include="Entities\Entities\MembershipRule.cs" />
     <Compile Include="Entities\Entities\PhysicalProductRule.cs" />
     <Compile Include="Entities\Entities\Payment.cs" />
+    <Compile Include="Entities\Entities\UpgradeMembershipRule.cs" />
     <Compile Include="Entities\Interface\IRule.cs" />
     <Compile Include="Enum\Enum_PaymentType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
