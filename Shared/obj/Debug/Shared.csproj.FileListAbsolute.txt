@@ -1,0 +1,4 @@
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Shared\bin\Debug\Shared.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Shared\bin\Debug\Shared.pdb
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Shared\obj\Debug\Shared.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Shared\obj\Debug\Shared.pdb

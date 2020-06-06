@@ -1,0 +1,4 @@
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\bin\Debug\Business.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\bin\Debug\Business.pdb
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\obj\Debug\Business.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\Business\obj\Debug\Business.pdb

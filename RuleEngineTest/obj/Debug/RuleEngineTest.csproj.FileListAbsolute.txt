@@ -1,1 +1,9 @@
 c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\obj\Debug\RuleEngineTest.csprojResolveAssemblyReference.cache
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\bin\Debug\RuleEngineTest.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\bin\Debug\RuleEngineTest.pdb
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\bin\Debug\Business.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\bin\Debug\Shared.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\bin\Debug\Business.pdb
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\bin\Debug\Shared.pdb
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\obj\Debug\RuleEngineTest.dll
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngineTest\obj\Debug\RuleEngineTest.pdb
