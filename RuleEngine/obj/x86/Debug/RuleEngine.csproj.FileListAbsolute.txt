@@ -1,0 +1,4 @@
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngine\bin\Debug\RuleEngine.exe
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngine\bin\Debug\RuleEngine.pdb
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngine\obj\x86\Debug\RuleEngine.exe
+c:\users\shelly\documents\visual studio 2010\Projects\RuleEngine\RuleEngine\obj\x86\Debug\RuleEngine.pdb
