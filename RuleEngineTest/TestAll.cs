@@ -80,9 +80,13 @@ namespace RuleEngineTest
             payment.IsBook = false;
             IRule rule = new MembershipRule();
             ruleManager.AddRule(rule);
+            rule = new E_MailRule();
+            ruleManager.AddRule(rule);
             var ruleResult = ruleManager.ExecuteRules(payment);
             bool isMembershipRuleApplied = ruleResult.Contains("Activate Membership");
             Assert.IsTrue(isMembershipRuleApplied);
+            bool isActivationMailSent = ruleResult.Contains("Mail To Owner About Membership Activation");
+            Assert.IsTrue(isActivationMailSent);
         }
     }
 }
